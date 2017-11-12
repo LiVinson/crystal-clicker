@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+    border: 4px solid black;
+    background-color: lightblue;
+
+    }
+
+h1 {
+    font-size: 45px;
+    text-align:center;
+    padding-top: 8px;
+    padding-bottom: 15px;
+}
+
+.instructions {
+    margin: 5px 20px 15px 20px;
+    font-size:20px;
+    
+}
+
+.leftColumn {
+    
+    float:left;
+    width: 30%;
+    border: 1px solid red;
+    margin-left: 20px;
+    height: 30%;
+    height: fit-content
+}
+
+.randomContainer {
+    background-color: darkblue;
+    width: 100%;
+    height: 200px;
+    display:block;
+    margin-bottom: 15px;
+    border: 1px solid black;
+}
+
+.winLossContainer {
+    clear: both;
+    border: 1px solid black;
+    height: 80px;
+}
+
+img {
+    width:175px;
+    height:175px;
+    float:left;
+    margin-bottom: 20px;
+    border: 1px solid black;
+}
+
+#crystal2,
+#crystal4 {
+    margin-left:20px;
+
+}
+.rightColumn {
+    float: right;
+    width: 60%;
+    margin-right: 20px
+}
+
+.gameInfo {
+    height:100%;
+}
+
+.total {
+    clear: both;
+    margin-top: 20px;
+    height:80px;
+    background-color: gray;
+}
