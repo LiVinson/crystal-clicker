@@ -3,14 +3,14 @@
 }
 
 .container {
-    width: 85%;
+    width: 80%;
     margin: auto;
     border: 4px solid black;
     background-color: lightblue;
 
     }
 
-h1 {
+#gameTitle {
     font-size: 45px;
     text-align:center;
     padding-top: 8px;
@@ -40,6 +40,10 @@ h1 {
     display:block;
     margin-bottom: 15px;
     border: 1px solid black;
+    font-size: 45px;
+    text-align:center;
+    padding-top: 8px;
+    padding-bottom: 15px;
 }
 
 .winLossContainer {
@@ -49,31 +53,46 @@ h1 {
 }
 
 img {
-    width:175px;
-    height:175px;
+    width:200px;
+    height:200px;
     float:left;
-    margin-bottom: 20px;
+    margin:0px;
     border: 1px solid black;
+    padding:0px;
 }
 
-#crystal2,
-#crystal4 {
+.images{
+    width:fit-content;
+}
+
+.rightButton {
     margin-left:20px;
 
 }
 .rightColumn {
     float: right;
     width: 60%;
-    margin-right: 20px
+    margin-right: 20px;
+    text-align: center;
 }
 
 .gameInfo {
     height:100%;
 }
 
-.total {
+.totalBox {
     clear: both;
     margin-top: 20px;
     height:80px;
     background-color: gray;
+    font-size: 45px;
+    text-align:center;
+    color: white;
+}
+
+button {
+    margin-bottom: 20px;
+    padding: 0px;
+    border: 2px solid silver;
+    
 }
