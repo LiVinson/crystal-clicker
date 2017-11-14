@@ -53,36 +53,25 @@
             //Runs test to see if total has exceeded random number
             if (total === randomNumber){
                 alert("You win!");
+                //Add steps for a you win message instead of alert
                 ++wins;
                 newGame();
 
             } else if (total > randomNumber){
                 alert("You Lose");
+                //Add steps for a you lose message instead of alert
                 ++losses;
                 newGame();
             };
     });
-
-   
+  
 });
    
-
-
-    //When page starts up:
-    //Generates a random number = (19 -120)
-    //Sets HTML ransom number span = random number value
-    //Sets total = 0
-    //Sets HTML total = total value
-    //Assigns value to each crystal (1 - 12)
-        
-//When a crystal is clicked
-    //Total increases by value number
-    //Sets HTML total = total value
-      
-    //After each click, runs a test:
-        //if total number = random number: end game/restart
-        //if total number > random number: end game/restart
-
+//Design:
+//Add sound when image is clicked
+//Add hover attributes over images
+//Determine color scheme and fonts
+//
 
 
 
