@@ -5,7 +5,12 @@
         //When page loads, set wins and losses to 0, and call newGame function.
         var wins = 0;
         var losses = 0;
+
         var gameMessage = ""
+
+        //Adds udio element to page
+        var audioClick = document.createElement("audio");
+        audioClick.setAttribute("src", "assets/images/Fantasy-magical-sound-effect.mp3");
         newGame();
 
         function newGame(){
@@ -45,7 +50,8 @@
 
     //Selects all html elements with class = crystalImages and when clicked runs a call back function
         $(".crystalImages").on("click", function(){
-            $("#total").css("color", "#EFEFEF");
+                     
+            $("#total").css("color", "#EFEFEF"); //Resets total font color and games message to nothing
             gameMessage = "";
             $(".gameMessage").text(gameMessage)
             
@@ -62,14 +68,9 @@
             console.log("The total is " + total);
             
             //Runs test to see if total has exceeded random number
-            if (total === randomNumber){
-                gameMessage = "You Won! Click a crystal to play again.";
-                $(".gameMessage").text(gameMessage)
-                //Add steps for a you win message instead of alert
-                ++wins;
-                $("#total").css("color", "#A9A9A9");
-                newGame();
-
+            if (total < randomNumber){
+                audioClick.play()
+            
             } else if (total > randomNumber){
                 gameMessage = "You Lost! Click a crystal to play again.";
                 $(".gameMessage").text(gameMessage);
@@ -77,16 +78,20 @@
                 ++losses;
                 $("#total").css("color", "#A9A9A9");
                 newGame();
-            };
-    });
+
+            } else {
+                gameMessage = "You Won! Click a crystal to play again.";
+                $(".gameMessage").text(gameMessage)
+                //Add steps for a you win message instead of alert
+                ++wins;
+                $("#total").css("color", "#A9A9A9");
+                newGame();
+            }
+        });
   
 });
    
-//Design:
-//Add sound when image is clicked - Refer to (10) Captain Planet solved
-//Add hover attributes over images
-//Determine color scheme and fonts
-//
+//Crystal click sound license: “Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)”
 
 
 

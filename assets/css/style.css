@@ -34,18 +34,19 @@ body{
     color: #FF3B3F;
     background-color: #EFEFEF;
     margin-bottom:10px;
-    text-shadow:
+    text-shadow: /*Adds outline to text  */
     -1px -1px 0 #A9A9A9,
     1px -1px 0 #A9A9A9,
     -1px 1px 0 #A9A9A9,
     1px 1px 0 #A9A9A9;
 }
 
-.topContainer{
+/* -------------------Contains instructions and random number */
+
+.topContainer { 
     display: flex;
     justify-content:space-between;
     align-items:center;
-    
 }
 
 .instructions {
@@ -54,7 +55,7 @@ body{
     width: 55%;
     padding-right: 5px;
     text-align: justify;
-    }
+}
 
 .instructionsStart{
     font-weight:bold;
@@ -62,23 +63,22 @@ body{
     font-style: italic;
 }
 
-.randomContainer {
+.randomContainer { 
     
     background-color: #A9A9A9;
     color: #EFEFEF;
     width: 40%;
     height: 200px;
-    display:block;    
     font-size: 45px;
     text-align:center;
     padding-top: 8px;
     padding-bottom: 15px;
-    border-radius: 5px;
-    
+    border-radius: 5px; /*Gives element rounded borders */
+  
 }
 
 #randomNumber  {
-    display:block;
+    display:block; /*To force number to next row*/
     margin-top:15px;
     font-size: 90px;
     color: #FF3B3F;
@@ -89,25 +89,23 @@ img {
     width:180px;
     height:180px;
     border: 2px solid #A9A9A9;
-    
 }
 
 img:hover {
 border: 2px solid #FF3B3F;
 opacity: .8;
-/* width: 190px;
-height: 190px; */
-
 }
+/* ---------------------Row of crystal images-------------------------------  */
 
 .images {
-   clear:both;    
+    clear:both;    
     padding: 20px 0px 20px 0px;
     display: flex;    
     justify-content: space-around;
     margin: auto;
 }
 
+/* -------------------- Total, win/loss and game message -------------------- */
 .gameInfo {
     display:flex;
     align-items:center;
@@ -121,7 +119,6 @@ height: 190px; */
     padding: 10px 15px 10px 15px;
     border-radius: 5px;
     margin-right:15px;
-
 }
 
 .winLoss{
