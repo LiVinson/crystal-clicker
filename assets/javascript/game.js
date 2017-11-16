@@ -8,7 +8,7 @@
 
         var gameMessage = ""
 
-        //Adds udio element to page
+        //Adds audio element to page
         var audioClick = document.createElement("audio");
         audioClick.setAttribute("src", "assets/images/Fantasy-magical-sound-effect.mp3");
         newGame();
@@ -33,7 +33,7 @@
             crystal3Value = Math.floor(Math.random() * 12) + 1;
             crystal4Value = Math.floor(Math.random() * 12) + 1;
         
-            console.log("Crystal1: " + crystal1Value + ", Crystal2: " + crystal2Value + ", Crystal3: " + crystal3Value + ", Crystal4: " + crystal4Value);                                                        
+                                     
         
             //Selects html element with corresponing id names and assigns an attribute called clickValue
             // with value = to crystal#value
@@ -50,14 +50,16 @@
 
     //Selects all html elements with class = crystalImages and when clicked runs a call back function
         $(".crystalImages").on("click", function(){
-                     
-            $("#total").css("color", "#EFEFEF"); //Resets total font color and games message to nothing
+           
+            audioClick.play()
+
+           //Resets total font color and game message to nothing
+            $("#total").css("color", "#EFEFEF"); 
             gameMessage = "";
             $(".gameMessage").text(gameMessage)
             
             //Sets the variable clickValue = to the randomly generated data-clickValue
             var clickValue = $(this).attr("data-clickValue");
-            console.log("clickValue is: " + clickValue + "and the type of value is: " + typeof(clickValue));
             
             //Takes total and increases by the clickValue(converted to integer)
             total += parseInt(clickValue);
@@ -68,10 +70,7 @@
             console.log("The total is " + total);
             
             //Runs test to see if total has exceeded random number
-            if (total < randomNumber){
-                audioClick.play()
-            
-            } else if (total > randomNumber){
+            if (total > randomNumber){
                 gameMessage = "You Lost! Click a crystal to play again.";
                 $(".gameMessage").text(gameMessage);
                 //Add steps for a you lose message instead of alert
@@ -79,7 +78,7 @@
                 $("#total").css("color", "#A9A9A9");
                 newGame();
 
-            } else {
+            } else if (total === randomNumber) {
                 gameMessage = "You Won! Click a crystal to play again.";
                 $(".gameMessage").text(gameMessage)
                 //Add steps for a you win message instead of alert

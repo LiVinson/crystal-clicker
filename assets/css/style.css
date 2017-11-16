@@ -11,8 +11,6 @@ body{
     font-family: 'Libre Franklin', sans-serif;
 }
 
-/**Colors: Sky #CAEBF2, Carbon: A9A9A9, Watermelon: FF3B3F, Neutral: EFEFEF
-
 /**Contains entire game**/
 .container {
     width: 78%;
@@ -22,6 +20,10 @@ body{
     padding: 20px 20px 20px 20px;
     background-color: #EFEFEF;
     min-height:100%;
+    display: flex;
+    flex-wrap:wrap;
+    /* flex-direction: column; */
+    justify-content: center;
     }
 
 /* Header: Crystal Click */
@@ -51,7 +53,7 @@ body{
 
 .instructions {
     margin: 0px 20px 0px 0px;
-    font-size:20px;
+    font-size:18px;
     width: 55%;
     padding-right: 5px;
     text-align: justify;
@@ -64,7 +66,6 @@ body{
 }
 
 .randomContainer { 
-    
     background-color: #A9A9A9;
     color: #EFEFEF;
     width: 40%;
@@ -74,7 +75,6 @@ body{
     padding-top: 8px;
     padding-bottom: 15px;
     border-radius: 5px; /*Gives element rounded borders */
-  
 }
 
 #randomNumber  {
@@ -83,6 +83,19 @@ body{
     font-size: 90px;
     color: #FF3B3F;
     font-family: 'Satisfy', cursive;
+    padding: 0px 5px 0px 5px;
+}
+
+
+/* ---------------------Row of crystal images-------------------------------  */
+
+.images { /**Image container **/
+    clear:both;    
+    padding: 20px 0px 20px 0px;
+    display: flex;    
+    justify-content: space-around !important;
+    margin: auto;
+    width:100%
 }
 
 img {
@@ -91,18 +104,9 @@ img {
     border: 2px solid #A9A9A9;
 }
 
-img:hover {
+img:hover { /*When use hovers on image */
 border: 2px solid #FF3B3F;
 opacity: .8;
-}
-/* ---------------------Row of crystal images-------------------------------  */
-
-.images {
-    clear:both;    
-    padding: 20px 0px 20px 0px;
-    display: flex;    
-    justify-content: space-around;
-    margin: auto;
 }
 
 /* -------------------- Total, win/loss and game message -------------------- */
@@ -142,6 +146,104 @@ margin-right:15px;
     margin:auto;
     color:#FF3B3F;
     font-size:20px;
-
 }
 
+/**MEDIA QUERIES**/
+
+/**Max Width: `980px**/
+@media screen and (max-width: 980px) {
+#gameTitle {
+        font-size: 60px;
+}
+
+img{
+    width:140px;
+    height:140px;
+}
+
+.instructions {
+    margin: 0px 20px 0px 0px;
+    font-size:16px;
+    width: 70%;
+}
+
+.randomContainer { 
+    
+    width: 35%;
+    height: 165px;
+    font-size: 35px;
+}
+
+#randomNumber  {
+    font-size: 65px;
+}
+
+}
+/**Max Width: `768px**/
+@media screen and (max-width: 768px) {
+
+    
+    
+    .instructions {
+        margin: 0px 20px 0px 0px;
+        font-size:14px;
+        width: 100%;
+        display:block;
+    }
+    
+    .randomContainer { 
+        
+        width: 35%;
+        height: 165px;
+        font-size: 25px;
+    }
+
+    #randomNumber  {
+        font-size: 45px;
+    }
+    .images { /**Image container **/
+        clear:both;    
+        padding: 20px 0px 20px 0px;
+        display: flex;    
+        width: 65%;
+        flex-wrap: wrap;
+        justify-content: space-around;!important
+        margin: auto;
+    }
+
+    #crystal1,
+    #crystal2 {
+        margin-bottom:10px;
+
+
+    }
+
+    .gameInfo {
+        display:block;
+        align-items:center;
+        width: 30%;
+        float: left;
+        padding: 20px 0px 20px 0px;
+}
+    
+.totalBox {
+    margin-right:0px;
+    font-size: 35px;
+
+
+    /* background-color: #FF3B3F;
+    font-size: 45px;
+    text-align:center;
+    color: #EFEFEF;
+    padding: 10px 15px 10px 15px;
+    border-radius: 5px; */
+   
+}
+
+.winLoss{
+    padding: 10px 15px 10px 15px;
+    margin-right:0px;
+}
+
+
+}
