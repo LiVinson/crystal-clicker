@@ -1,10 +1,11 @@
 <!DOCTYPE>
-<html>
+<html lang="en-us">
 <head>
     <meta charset = UTF-8>
 
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:300,400|Satisfy" rel="stylesheet">
 
     <title>Crystal Game</title>
    
@@ -13,48 +14,50 @@
 <body>
 
     <div class="container">
-        <h1 id = "gameTitle">Crystal Collector</h1>
 
-        <div class="instructions">
-            <p><b>Instructions:</b> You will be given random number at the start of each game. Click 
-            the crystals below to add to your total score until you reach the random number. Each crystal
-            will be worth a different value</p><br>
-                   
-            <p>You win the game by matching your total score to the random number. 
-                You lose the game if your total score goes above the random number.</p><br>
-            
-            <p>Each time the game restarts (after a win or a loss) the game will change the
-                values of each crystal and choose a new random number. </p>
-                        
+        <h1 id = "gameTitle">Crystal Click</h1>
+
+        <div class="topContainer">
+
+            <div class="instructions">
+                <p><span class="instructionsStart">Instructions:</span> You will be given random number at the start of each game. Click 
+                the crystals below to add to your total score until you reach the random number. Each crystal
+                will be worth a different value</p><br>
+                    
+                <p>You win the game by matching your total score to the random number. 
+                    You lose the game if your total score goes above the random number. Each time the game restarts
+                    (after a win or a loss) the game will change the value of each crystal and choose a new random number.</p>
+            </div>
+
+            <div class = "randomContainer"><h1 class="randomText">Number To Guess: </h1><span id = "randomNumber"></span></div>
+        
         </div>
 
+        <div class = "images">
+            <img id = "crystal1" class="crystalImages" src = "assets/images/crystal1.png" alt = "crystal image 1">
+            <img id = "crystal2" class="crystalImages" src = "assets/images/crystal2.png" alt = "crystal image 2">
+            <img id = "crystal3" class="crystalImages" src = "assets/images/crystal3.jpg" alt = "crystal image 3">
+            <img id = "crystal4" class="crystalImages" src = "assets/images/crystal4.jpg" alt = "crystal image 4">
+        </div>
+
+
+
         <div class = "gameInfo">
-            <div class ="leftColumn" > 
-                <h1 class = "randomContainer">Random Number: <span id = "randomNumber"> </span></h1>
-                <div class="winLossContainer">
-                    <p>Wins: <span id="wins">0</span> </p>
-                    <p>Losses: <span id="losses">0</span> </p>
-                </div>
-            </div>
+            
+                <div class="totalBox">Total: <span id="total"></span></div>
+            
+                <div class="winLoss">Wins: <span id="wins"></span> </div>
+                    
+                <div class="winLoss">Losses: <span id="losses"></span> </div>
 
-            <div class = "rightColumn">
-                <div class = "images">
-                        <button class="leftButton"><img id = "crystal1" class="crystalImages" src = "assets/images/crystal1.png" alt = "crystal image 1"></button>
-                        <button class="rightButton"><img id = "crystal2" class="crystalImages" src = "assets/images/crystal2.png" alt = "crystal image 2"></button>
-                        <button class="leftButton"><img id = "crystal3" class="crystalImages" src = "assets/images/crystal3.jpg" alt = "crystal image 3"></button>
-                        <button class="rightButton"><img id = "crystal4" class="crystalImages" src = "assets/images/crystal4.jpg" alt = "crystal image 4"></button>
-                </div>
-
-                <div class="totalBox">Total: <span id="total"></span>
-                   
-                </div>
-            </div>
+                <div class="gameMessage"></div>
+                
 
         </div>
 
     </div>
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>"
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type ="text/javascript" src="assets/javascript/game.js"></script>
   
 

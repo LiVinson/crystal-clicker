@@ -5,12 +5,20 @@
         //When page loads, set wins and losses to 0, and call newGame function.
         var wins = 0;
         var losses = 0;
+        var gameMessage = ""
         newGame();
 
         function newGame(){
-            console.log("New Game!");
+            console.log("New Game! Wins: " + wins + ", Losses: " + losses);
+            
+            $("#wins").text(wins);
+            $("#losses").text(losses);
+                                
             total = 0;
             $("#total").text(total);
+            
+
+
         
             randomNumber =  Math.floor(Math.random() * 102) + 19;
             $("#randomNumber").text(randomNumber);
@@ -37,6 +45,9 @@
 
     //Selects all html elements with class = crystalImages and when clicked runs a call back function
         $(".crystalImages").on("click", function(){
+            $("#total").css("color", "#EFEFEF");
+            gameMessage = "";
+            $(".gameMessage").text(gameMessage)
             
             //Sets the variable clickValue = to the randomly generated data-clickValue
             var clickValue = $(this).attr("data-clickValue");
@@ -52,15 +63,19 @@
             
             //Runs test to see if total has exceeded random number
             if (total === randomNumber){
-                alert("You win!");
+                gameMessage = "You Won! Click a crystal to play again.";
+                $(".gameMessage").text(gameMessage)
                 //Add steps for a you win message instead of alert
                 ++wins;
+                $("#total").css("color", "#A9A9A9");
                 newGame();
 
             } else if (total > randomNumber){
-                alert("You Lose");
+                gameMessage = "You Lost! Click a crystal to play again.";
+                $(".gameMessage").text(gameMessage);
                 //Add steps for a you lose message instead of alert
                 ++losses;
+                $("#total").css("color", "#A9A9A9");
                 newGame();
             };
     });
@@ -68,7 +83,7 @@
 });
    
 //Design:
-//Add sound when image is clicked
+//Add sound when image is clicked - Refer to (10) Captain Planet solved
 //Add hover attributes over images
 //Determine color scheme and fonts
 //
