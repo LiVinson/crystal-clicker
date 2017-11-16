@@ -140,6 +140,7 @@ margin-right:15px;
 #losses,
 #wins {
     text-align:center;
+    color: #FF3B3F;
 }
 
 .gameMessage{
@@ -148,42 +149,41 @@ margin-right:15px;
     font-size:20px;
 }
 
-/**MEDIA QUERIES**/
+/**-----------------MEDIA QUERIES**-----------------------------------------------------/
 
 /**Max Width: `980px**/
 @media screen and (max-width: 980px) {
-#gameTitle {
-        font-size: 60px;
+    #gameTitle {
+            font-size: 60px;
+    }
+
+    img{
+        width:140px;
+        height:140px;
+    }
+
+    .instructions {
+        margin: 0px 20px 0px 0px;
+        font-size:16px;
+        width: 70%;
+    }
+
+    .randomContainer { 
+        
+        width: 35%;
+        height: 165px;
+        font-size: 35px;
+    }
+
+    #randomNumber  {
+        font-size: 65px;
+    }
+
 }
 
-img{
-    width:140px;
-    height:140px;
-}
-
-.instructions {
-    margin: 0px 20px 0px 0px;
-    font-size:16px;
-    width: 70%;
-}
-
-.randomContainer { 
-    
-    width: 35%;
-    height: 165px;
-    font-size: 35px;
-}
-
-#randomNumber  {
-    font-size: 65px;
-}
-
-}
 /**Max Width: `768px**/
 @media screen and (max-width: 768px) {
-
-    
-    
+      
     .instructions {
         margin: 0px 20px 0px 0px;
         font-size:14px;
@@ -207,15 +207,13 @@ img{
         display: flex;    
         width: 65%;
         flex-wrap: wrap;
-        justify-content: space-around;!important
+        justify-content: space-around !important;
         margin: auto;
     }
 
     #crystal1,
     #crystal2 {
         margin-bottom:10px;
-
-
     }
 
     .gameInfo {
@@ -224,26 +222,17 @@ img{
         width: 30%;
         float: left;
         padding: 20px 0px 20px 0px;
-}
+    }
     
-.totalBox {
-    margin-right:0px;
-    font-size: 35px;
+    .totalBox {
+        margin-right:0px;
+        font-size: 35px;
+    }
 
-
-    /* background-color: #FF3B3F;
-    font-size: 45px;
-    text-align:center;
-    color: #EFEFEF;
-    padding: 10px 15px 10px 15px;
-    border-radius: 5px; */
-   
-}
-
-.winLoss{
-    padding: 10px 15px 10px 15px;
-    margin-right:0px;
-}
+    .winLoss{
+        padding: 10px 15px 10px 15px;
+        margin-right:0px;
+    }
 
 
 }
